@@ -9,7 +9,7 @@ url: "http://trituenhantao.github.io"          # your host, for absolute URL
 baseurl: ""
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "Adventure is the best way to learn."
 sidebar-avatar: /img/tri-tue-nhan-tao.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # SNS settings
