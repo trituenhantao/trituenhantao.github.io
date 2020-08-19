@@ -1,11 +1,11 @@
 # Site settings
-title: Võ Văn Phúc
-SEOTitle: Võ Văn Phúc | Fuck Blog
+title: Blog Trí Tuệ Nhân Tạo
+SEOTitle: Trang web giành cho người mới học về Trí Tuệ Nhân Tạo
 header-img: img/post-bg-desk.jpg
-email: vovanphuc00598@gmail.com
-description: "Every failure is leading towards success."
-keyword: "Phuc, hihi, phuc, hehe"
-url: "http://vovanphuc.github.io"          # your host, for absolute URL
+email: trituenhantaoblog@gmail.com
+description: Nơi chia sẽ kiến thức từ lý thuyết đến thực tế của bộ môn Trí tuệ nhân tạo, giúp mọi người có được hiểu rõ hơn về ngành đang rất hot hiện này
+keyword: "trí tuệ nhân tạo, machine leanring, deep learing, học trí tuệ nhân tạo, blog trí tuệ nhân tạo, học machine learing, học deeplearing, học trí tuệ nhân tạo từ đầu"
+url: "http://trituenhantao.github.io"          # your host, for absolute URL
 baseurl: ""
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
