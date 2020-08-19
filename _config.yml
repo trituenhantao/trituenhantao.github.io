@@ -1,7 +1,7 @@
 # Site settings
 title: Blog Trí Tuệ Nhân Tạo
 SEOTitle: Trang web giành cho người mới học về Trí Tuệ Nhân Tạo
-header-img: img/post-bg-desk.jpg
+header-img: img/tri-tue-nhan-tao-bg.jpg
 email: trituenhantaoblog@gmail.com
 description: Nơi chia sẽ kiến thức từ lý thuyết đến thực tế của bộ môn Trí tuệ nhân tạo, giúp mọi người có được hiểu rõ hơn về ngành đang rất hot hiện này
 keyword: "trí tuệ nhân tạo, machine leanring, deep learing, học trí tuệ nhân tạo, blog trí tuệ nhân tạo, học machine learing, học deeplearing, học trí tuệ nhân tạo từ đầu"
@@ -10,7 +10,7 @@ baseurl: ""
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/tri-tue-nhan-tao.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # SNS settings
 RSS: false
