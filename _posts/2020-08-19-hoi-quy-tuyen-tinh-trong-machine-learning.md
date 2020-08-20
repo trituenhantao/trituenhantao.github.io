@@ -15,14 +15,49 @@ tags:
     - scikit learn
     - Supervised learning
 ---
-Hồi quy tuyến tính ( Linear Regression ) là bài toán cơ bản và đơn giản nhất của Machine Learning. Hồi quy tuyến tính thuộc nhóm Học có giám sát ( Supervised Learning ). Trong bài này mình sẽ giới thiệu cho các bạn một Simple Linear Regression và Multiple Linear Regression từ lý thuyết đến cách triển khai trong môi trường thực tế sử dụng thư viện scikit learn.
+Hồi quy tuyến tính ( Linear Regression ) là bài toán cơ bản và đơn giản nhất của Machine Learning. Hồi quy tuyến tính thuộc nhóm Học có giám sát ( Supervised Learning ). Trong bài này mình sẽ hướng dẫn cho các bạn triển khai một Simple Linear Regression và Multiple Linear Regression trong môi trường thực tế sử dụng thư viện scikit learn.
 
-## 
+## I. Simple Linear Regression
+### 1. Bộ dữ liệu
+Trường học A đã khảo sát số giờ học ở nhà trong tuần sinh viên giành môn học Giải tích 1 và kết quả đạt được sau khi kết thúc môn học, thống kê được như sau :
+| Hours | Scores |
+|-------|--------|
+| 2.0   | 4.1    |
+| 4.6   | 6.7    |
+| 2.5   | 4.7    |
+| 8.0   | 8.2    |
+| 3.0   | 5.0    |
+| 1.0   | 3.2    |
+| 8.7   | 9.3    |
+| 5.0   | 7.0    |
+| 8.5   | 7.8    |
+| 2.7   | 4.5    |
+| 7.2   | 8.5    |
+| 5.4   | 7.2    |
+| 4.0   | 6.1    |
+| 2.8   | 4.2    |
+| 1.0   | 2.7    |
+| 0.5   | 1.2    |
+| 2.1   | 3.5    |
+| 1.4   | 4.4    |
+| 5.6   | 7.7    |
+| 12.4  | 9.5    |
+| 3.1   | 4.5    |
+| 6.2   | 7.0    |
+| 3.3   | 5.5    |
+| 6.5   | 7.6    |
 
+(Các bạn có thể tải file tại [đây](https://raw.githubusercontent.com/trituenhantao/data-web/master/giai-tich1.csv) ) 
 
-## Tại sao lại sử dụng nó?
+### 2. Import các thư viện cần thiết cho bài toán :
 
-Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem Ipsum làm đoạn văn bản giả, và nếu bạn thử tìm các đoạn "Lorem ipsum" trên mạng thì sẽ khám phá ra nhiều trang web hiện vẫn đang trong quá trình xây dựng. Có nhiều phiên bản khác nhau đã xuất hiện, đôi khi do vô tình, nhiều khi do cố ý (xen thêm vào những câu hài hước hay thông tục).
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression 
+```
+_để import được các thư viện trước tiên bạn phải cài đặt thư viện tại môi trường python đang làm việc._
 ### Nó đến từ đâu?
 
 Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh cổ điển xuất hiện từ năm 45 trước Công Nguyên, nghĩa là nó đã có khoảng hơn 2000 tuổi. Một giáo sư của trường Hampden-Sydney College (bang Virginia - Mỹ) quan tâm tới một trong những từ la-tinh khó hiểu nhất, "consectetur", trích từ một đoạn của Lorem Ipsum, và đã nghiên cứu tất cả các ứng dụng của từ này trong văn học cổ điển, để từ đó tìm ra nguồn gốc không thể chối cãi của Lorem Ipsum. Thật ra, nó được tìm thấy trong các đoạn 1.10.32 và 1.10.33 của "De Finibus Bonorum et Malorum" (Đỉnh tối thượng của Cái Tốt và Cái Xấu) viết bởi Cicero vào năm 45 trước Công Nguyên. Cuốn sách này là một luận thuyết đạo lí rất phổ biến trong thời kì Phục Hưng. Dòng đầu tiên của Lorem Ipsum, "Lorem ipsum dolor sit amet..." được trích từ một câu trong đoạn thứ 1.10.32.
