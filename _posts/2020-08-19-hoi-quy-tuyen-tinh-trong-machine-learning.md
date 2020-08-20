@@ -31,7 +31,7 @@ Trường học A đã khảo sát số giờ học ở nhà trong tuần sinh v
 | ...   | ...    |
 
 
-(Các bạn có thể tải file đầy đủ tại [đây](https://raw.githubusercontent.com/trituenhantao/data-web/master/giai-tich1.csv) ) 
+(Các bạn có thể tải file đầy đủ tại [đây](https://raw.githubusercontent.com/trituenhantao/data-web/master/giai-tich1.csv){:target="_blank"} ) 
 
 ### 2. Import thư viện:
 
@@ -89,5 +89,5 @@ print('Điểm thi của người đó là: ',regression.predict(np.array([[5.3]
 
 Ngoài ra bạn còn có thể chia tập dữ liệu thành 80% để tính, và 20% để kiểm tra. Sau đó dùng các hàm tính độ chính xác để tính độ chính xác của hồi quy tuyến tính trên tập kiểm tra.
 
-Bạn có thể chạy và tham khảo code [tạiđây](https://colab.research.google.com/drive/1w-e15IPjao1zbQiOdYTQ5UMBIvjubrFK?authuser=2#scrollTo=DstS-E7MlGCx)
+Bạn có thể chạy và tham khảo code [tạiđây](https://colab.research.google.com/drive/1w-e15IPjao1zbQiOdYTQ5UMBIvjubrFK?authuser=2#scrollTo=DstS-E7MlGCx){:target="_blank"}
 
