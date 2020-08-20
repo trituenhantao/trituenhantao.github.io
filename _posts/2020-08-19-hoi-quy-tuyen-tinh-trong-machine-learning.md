@@ -50,7 +50,7 @@ Sau khi đã tải file csv về bạn cần đọc các dữ liệu từ file c
 
 ```
 data = pd.read_csv('giai-tich1.csv')
-dataset.head()
+data.head()
 ```
 
 _ngoài ra bạn còn có thể sử dụng các hàm describe trong pandas xem tổng quan về dữ liệu của mình_
@@ -60,19 +60,20 @@ _ngoài ra bạn còn có thể sử dụng các hàm describe trong pandas xem 
 Bạn có thể sử dụng thư viện matplotlib để biểu diễn dữ liệu của bài toán hồi quy tuyến tính một cách trực quan hơn.
 
 ```
-dataset.plot(x='Hours', y='Scores', style='ro')
+data.plot(x='Hours', y='Scores', style='ro')
 plt.xlabel('Số giờ học')
 plt.ylabel('Số điểm')
 plt.show()
 ```
+![biểu đồ biểu diễn dữ liệu ](img/hoi-quy-tuyen-tinh-linear-regression.jpg "Hồi quy tuyến tính Linear Regression")
 
 ### 5. Tính hồi quy tuyến tính do dữ liệu :
 
 Để tính hồi quy tuyến tính cho dữ liệu mình sẽ sử dụng hàm LinearRegression của thư viện scikit learn đã import ở trên
 
 ```
-X_train = dataset.iloc[:, :-1].values
-y_train = dataset.iloc[:, 1].values
+X_train = data.iloc[:, :-1].values
+y_train = data.iloc[:, 1].values
 regression = LinearRegression()
 regression.fit(X_train, y_train)
 ```
@@ -83,9 +84,9 @@ regression.fit(X_train, y_train)
 ví dụ số giờ về nhà sinh viên mới giành cho môn giải tích 1 là 5.3 giờ/tuần.
 
 ```
-print('Điểm thi của người đó là: ',regression.predict(5.3) )
+print('Điểm thi của người đó là: ',regression.predict(np.array([[5.3]]))[0])
 ```
 
 Ngoài ra bạn còn có thể chia tập dữ liệu thành 80% để tính, và 20% để kiểm tra. Sau đó dùng các hàm tính độ chính xác để tính độ chính xác của hồi quy tuyến tính trên tập kiểm tra.
 
-
+Bạn có thể chạy và tham khảo code [tại đây] ()
