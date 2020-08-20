@@ -73,9 +73,19 @@ plt.show()
 ```
 X_train = dataset.iloc[:, :-1].values
 y_train = dataset.iloc[:, 1].values
-regressor = LinearRegression()
-regressor.fit(X_train, y_train)
+regression = LinearRegression()
+regression.fit(X_train, y_train)
 ```
 
-### 6. Kiểm tra độ chính xác của thuật toán :
+### 6. Dự đoán đối với sinh viên mới :
+
+Để dự đoán kết quả tổng kết môn giải tích 1 với một sinh viên mới học ta chỉ cần sử dụng lại kết quả của hồi quy tuyến tính trên như sau :
+ví dụ số giờ về nhà sinh viên mới giành cho môn giải tích 1 là 5.3 giờ/tuần.
+
+```
+print('Điểm thi của người đó là: ',regression.predict(5.3) )
+```
+
+Ngoài ra bạn còn có thể chia tập dữ liệu thành 80% để tính, và 20% để kiểm tra. Sau đó dùng các hàm tính độ chính xác để tính độ chính xác của hồi quy tuyến tính trên tập kiểm tra.
+
 
