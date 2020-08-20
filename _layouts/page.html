@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="http://trituenhantao.github.io">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
@@ -28,6 +28,10 @@
     <script></script>
 </head>
 <!-- Page Header -->
+<body ontouchstart="">
+
+    {% include nav.html %}
+
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
@@ -221,3 +225,14 @@
         {% endif %}
 	</div>
 </div>
+
+    {% include footer.html %}
+
+
+<!-- Image to hack wechat -->
+<img src="/img/apple-touch-icon.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
