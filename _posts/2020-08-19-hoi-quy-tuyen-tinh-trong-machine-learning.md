@@ -20,6 +20,7 @@ Hồi quy tuyến tính ( Linear Regression ) là bài toán cơ bản và đơn
 ## I. Simple Linear Regression
 ### 1. Bộ dữ liệu
 Trường học A đã khảo sát số giờ học ở nhà trong tuần sinh viên giành môn học Giải tích 1 và kết quả đạt được sau khi kết thúc môn học, thống kê được như sau :
+
 | Hours | Scores |
 |-------|--------|
 | 2.0   | 4.1    |
@@ -49,7 +50,9 @@ Trường học A đã khảo sát số giờ học ở nhà trong tuần sinh v
 
 (Các bạn có thể tải file tại [đây](https://raw.githubusercontent.com/trituenhantao/data-web/master/giai-tich1.csv) ) 
 
-### 2. Import các thư viện cần thiết cho bài toán :
+### 2. Import thư viện:
+
+Đầu tiên chúng ta cần phải import các thư viện cần thiết cho bài bài toán hồi quy tuyến tính
 
 ```
 import pandas as pd
@@ -57,10 +60,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression 
 ```
-_để import được các thư viện trước tiên bạn phải cài đặt thư viện tại môi trường python đang làm việc._
-### Nó đến từ đâu?
+_để import được các thư viện trước tiên bạn phải đảm bảo đã cài đặt thư viện này tại môi trường python đang làm việc._
+### 3. Đọc dữ liệu từ file csv :
 
-Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh cổ điển xuất hiện từ năm 45 trước Công Nguyên, nghĩa là nó đã có khoảng hơn 2000 tuổi. Một giáo sư của trường Hampden-Sydney College (bang Virginia - Mỹ) quan tâm tới một trong những từ la-tinh khó hiểu nhất, "consectetur", trích từ một đoạn của Lorem Ipsum, và đã nghiên cứu tất cả các ứng dụng của từ này trong văn học cổ điển, để từ đó tìm ra nguồn gốc không thể chối cãi của Lorem Ipsum. Thật ra, nó được tìm thấy trong các đoạn 1.10.32 và 1.10.33 của "De Finibus Bonorum et Malorum" (Đỉnh tối thượng của Cái Tốt và Cái Xấu) viết bởi Cicero vào năm 45 trước Công Nguyên. Cuốn sách này là một luận thuyết đạo lí rất phổ biến trong thời kì Phục Hưng. Dòng đầu tiên của Lorem Ipsum, "Lorem ipsum dolor sit amet..." được trích từ một câu trong đoạn thứ 1.10.32.
+Sau khi đã tải file csv về bạn cần đọc các dữ liệu từ file csv đó, chúng ta sử dụng hàm read_csv trong thư viện pandas và hiển thị nó ra màn hình để kiểm tra lại.
+
+```
+data = pd.read_csv('giai-tich1.csv')
+dataset.head()
+```
+
+_ngoài ra bạn còn có thể sử dụng các hàm describe trong pandas xem tổng quan về dữ liệu của mình_
+
+### 4. Biễu diễn dữ liệu trên biểu đồ :
+
+Bạn có thể sử dụng thư viện matplotlib để biểu diễn dữ liệu của bài toán hồi quy tuyến tính một cách trực quan hơn.
+
+```
+dataset.plot(x='Hours', y='Scores', style='o')
+plt.xlabel('Số giờ học')
+plt.ylabel('Số điểm')
+plt.show()
+```
 
 ![](https://cdn.mos.cms.futurecdn.net/RdxhPVv8fAyM6oHsRgF6dH-650-80.png)
 
