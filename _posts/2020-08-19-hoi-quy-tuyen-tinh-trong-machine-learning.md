@@ -65,7 +65,7 @@ plt.xlabel('Số giờ học')
 plt.ylabel('Số điểm')
 plt.show()
 ```
-![biểu đồ biểu diễn dữ liệu ](img/hoi-quy-tuyen-tinh-linear-regression.jpg "Hồi quy tuyến tính Linear Regression")
+![biểu đồ biểu diễn dữ liệu ](/img/hoi-quy-tuyen-tinh-linear-regression.jpg "Hồi quy tuyến tính Linear Regression")
 
 ### 5. Tính hồi quy tuyến tính do dữ liệu :
 
