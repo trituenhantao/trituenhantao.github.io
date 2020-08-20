@@ -1,14 +1,39 @@
----
-layout: default
----
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Nơi chia sẽ kiến thức từ lý thuyết đến thực tế của bộ môn Trí tuệ nhân tạo, giúp mọi người có được hiểu rõ hơn về ngành đang rất hot hiện này">
+    <meta name="keywords"  content="blog trí tuệ nhân tạo, blog giành cho người mới học trí tuệ nhân tạo, blog trí tuệ nhân tạo từ lý thuyết đến thực tế, blog machine learning, blog deep learning">
+    <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
+    <meta name="google-site-verification" content="HPqtmCHbIgJSOCpjNBVxSMlBUboGc81e3vMj6tFNXbQ" />
+    <title>Blog Trí Tuệ Nhân Tạo giành cho người mới | Blog TTNT</title>
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/hux-blog.min.css" | prepend: site.baseurl }}">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script></script>
+</head>
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
                 <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <h1>Blog trí tuệ nhân tạo</h1>
                     <!--<hr class="small">-->
                     <span class="subheading">whatever you learn, just write them!</span>
                 </div>
