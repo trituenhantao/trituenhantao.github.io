@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:     Hồi quy tuyến tính
+title: Bài 1 - Hồi quy tuyến tính
 SEOTitle : Hồi quy tuyến tính trong machine learning | blog TTNT
 description: Hồi quy tuyến tính trong machine learning từ lý thuyết đến thực tế sử dụng python, giúp mọi người tiếp cận một các dễ dàng
 keywords: "hồi quy tuyến tính, Hồi quy tuyến tính trong machine learning, linear regression, hồi quy tuyến tính scikit learn, thuật toán hồi quy tuyến tính, áp dụng hồi quy tuyến tính, hoi quy tuyen tinh, thuat toan hoi quy tuyen tinh"
-url: "http://trituenhantao.github.io/hoi-quy-tuyen-tinh-trong-machine-learning" 
+sub_url: "http://trituenhantao.github.io/hoi-quy-tuyen-tinh-trong-machine-learning" 
 #subtitle:   từ lý thuyết đến áp dụng 
 date:       2020-08-20
 author:     admin
@@ -15,10 +15,10 @@ tags:
     - scikit learn
     - Supervised learning
 ---
+Hồi quy tuyến tính ( Linear Regression ) là bài toán cơ bản và đơn giản nhất của Machine Learning. Hồi quy tuyến tính thuộc nhóm Học có giám sát ( Supervised Learning ). Trong bài này mình sẽ giới thiệu cho các bạn một Simple Linear Regression và Multiple Linear Regression từ lý thuyết đến cách triển khai trong môi trường thực tế sử dụng thư viện scikit learn.
 
-## Lorem Ipsum là gì?
+## 
 
-Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm 1500, khi một họa sĩ vô danh ghép nhiều đoạn văn bản với nhau để tạo thành một bản mẫu văn bản. Đoạn văn bản này không những đã tồn tại năm thế kỉ, mà khi được áp dụng vào tin học văn phòng, nội dung của nó vẫn không hề bị thay đổi. Nó đã được phổ biến trong những năm 1960 nhờ việc bán những bản giấy Letraset in những đoạn Lorem Ipsum, và gần đây hơn, được sử dụng trong các ứng dụng dàn trang, như Aldus PageMaker.
 
 ## Tại sao lại sử dụng nó?
 
