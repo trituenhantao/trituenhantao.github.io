@@ -65,7 +65,7 @@ plt.xlabel('Số giờ học')
 plt.ylabel('Số điểm')
 plt.show()
 ```
-![biểu đồ biểu diễn dữ liệu ](/img/hoi-quy-tuyen-tinh-linear-regression.jpg "Hồi quy tuyến tính Linear Regression")
+![Hồi quy tuyến tính Linear Regression](/img/hoi-quy-tuyen-tinh-linear-regression.jpg "Hồi quy tuyến tính Linear Regression")
 
 ### 5. Tính hồi quy tuyến tính do dữ liệu :
 
@@ -89,5 +89,5 @@ print('Điểm thi của người đó là: ',regression.predict(np.array([[5.3]
 
 Ngoài ra bạn còn có thể chia tập dữ liệu thành 80% để tính, và 20% để kiểm tra. Sau đó dùng các hàm tính độ chính xác để tính độ chính xác của hồi quy tuyến tính trên tập kiểm tra.
 
-Bạn có thể chạy và tham khảo code [tạiđây] (https://colab.research.google.com/drive/1w-e15IPjao1zbQiOdYTQ5UMBIvjubrFK?authuser=2#scrollTo=DstS-E7MlGCx)
+Bạn có thể chạy và tham khảo code [tạiđây](https://colab.research.google.com/drive/1w-e15IPjao1zbQiOdYTQ5UMBIvjubrFK?authuser=2#scrollTo=DstS-E7MlGCx)
 
