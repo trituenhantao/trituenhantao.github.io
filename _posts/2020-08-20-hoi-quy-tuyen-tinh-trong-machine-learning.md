@@ -18,6 +18,7 @@ tags:
 Hồi quy tuyến tính ( Linear Regression ) là bài toán cơ bản và đơn giản nhất của Machine Learning. Hồi quy tuyến tính thuộc nhóm Học có giám sát ( Supervised Learning ). Trong bài này mình sẽ hướng dẫn cho các bạn triển khai một Simple Linear Regression và Multiple Linear Regression trong môi trường thực tế sử dụng thư viện scikit learn.
 
 ## I. Simple Linear Regression
+Simple Linear Regression (Hồi quy tuyến tính đơn giản ) là là một phương pháp thống kê để hồi quy dữ liệu với biến phụ thuộc có giá trị liên tục trong khi các biến độc lập có thể có một trong hai giá trị liên tục hoặc là giá trị phân loại.
 ### 1. Bộ dữ liệu
 Trường học A đã khảo sát số giờ học ở nhà trong tuần sinh viên giành môn học Giải tích 1 và kết quả đạt được sau khi kết thúc môn học, thống kê được như sau :
 
@@ -78,7 +79,7 @@ regression = LinearRegression()
 regression.fit(X_train, y_train)
 ```
 
-### 6. Dự đoán đối với sinh viên mới :
+### 6. Dự đoán đối với dữ liệu mới :
 
 Để dự đoán kết quả tổng kết môn giải tích 1 với một sinh viên mới học ta chỉ cần sử dụng lại kết quả của hồi quy tuyến tính trên như sau :
 ví dụ số giờ về nhà sinh viên mới giành cho môn giải tích 1 là 5.3 giờ/tuần.
@@ -91,3 +92,5 @@ Ngoài ra bạn còn có thể chia tập dữ liệu thành 80% để tính, v�
 
 Bạn có thể chạy và tham khảo code [tạiđây](https://colab.research.google.com/drive/1w-e15IPjao1zbQiOdYTQ5UMBIvjubrFK?authuser=2#scrollTo=DstS-E7MlGCx){:target="_blank"}
 
+## Multiple Linear Regression :
+Multiple Linear Regression (Hồi quy tuyến tính đa biến ) là là một phương pháp thống kê để hồi quy dữ liệu có nhiều biến độc lập.
