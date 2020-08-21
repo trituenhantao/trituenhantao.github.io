@@ -1,9 +1,9 @@
 ---
 layout:     post
-title: Bài 1 - Hồi quy tuyến tính
+title: Hồi quy tuyến tính
 SEOTitle : Hồi quy tuyến tính trong machine learning | blog TTNT
 description: Hồi quy tuyến tính trong machine learning từ lý thuyết đến thực tế sử dụng python, giúp mọi người tiếp cận một các dễ dàng
-keywords: "hồi quy tuyến tính, Hồi quy tuyến tính trong machine learning, linear regression, hồi quy tuyến tính scikit learn, thuật toán hồi quy tuyến tính, áp dụng hồi quy tuyến tính, hoi quy tuyen tinh, thuat toan hoi quy tuyen tinh"
+keywords: "hồi quy tuyến tính, Hồi quy tuyến tính trong machine learning, linear regression, hồi quy tuyến tính scikit learn, thuật toán hồi quy tuyến tính, áp dụng hồi quy tuyến tính, hoi quy tuyen tinh, thuat toan hoi quy tuyen tinh, Multiple Linear Regression, Simple Linear Regression"
 sub_url: "http://trituenhantao.github.io/hoi-quy-tuyen-tinh-trong-machine-learning" 
 #subtitle:   từ lý thuyết đến áp dụng 
 date:       2020-08-20
@@ -92,5 +92,8 @@ Ngoài ra bạn còn có thể chia tập dữ liệu thành 80% để tính, v�
 
 Bạn có thể chạy và tham khảo code [tạiđây](https://colab.research.google.com/drive/1w-e15IPjao1zbQiOdYTQ5UMBIvjubrFK?authuser=2#scrollTo=DstS-E7MlGCx){:target="_blank"}
 
-## Multiple Linear Regression :
+## II. Multiple Linear Regression :
+
 Multiple Linear Regression (Hồi quy tuyến tính đa biến ) là là một phương pháp thống kê để hồi quy dữ liệu có nhiều biến độc lập.
+
+Tương tự Simple Linear Regression, Bạn có thể sử dụng thư viện scikit learn để khảo sát bài toán này.
