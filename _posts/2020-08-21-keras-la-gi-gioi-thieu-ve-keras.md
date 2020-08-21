@@ -58,7 +58,7 @@ Dữ liệu cho bài này mình sẽ sử dụng tập MNIST, đây là tập d�
 import keras
 
 from keras.models import Sequential
-from keras.layers import Dense
+from keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D, Input, Reshape
 from keras.utils import to_categorical
 import matplotlib.pyplot as plt
 from keras.datasets import mnist
@@ -94,13 +94,34 @@ Bắt đầu thôi nào !!!
 
 #### 4.1. Xây dựng model keras bằng Sequential model :
 
+```
 model = Sequential()
-model.add(Conv2D(32, (3, 3), activation='sigmoid', input_shape=(28,28,1)))
-model.add(Conv2D(32, (3, 3), activation='sigmoid'))
-model.add(MaxPooling2D(pool_size=(2,2)))
-model.add(Flatten())
-model.add(Dense(128, activation='sigmoid'))
-model.add(Dense(10, activation='softmax'))
+model.add(Flatten(input_shape=[28, 28]))
+model.add(.Dense(256, activation="relu"))
+model.add(Dense(128, activation="relu"))
+model.add(Dense(10, activation="softmax"))
+model.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+model.summary()
+
+````
+Mình sẽ giải thích cho bạn bạn đoạn code này mình viết gì
+
+#### 4.2. Xây dựng model keras bằng Function API :
+
+```
+input_ = Input(shape=[28, 28])
+flatten = Flatten(input_shape=[28, 28])(input_)
+hidden1 = Dense(2**14, activation="relu")(flatten)
+hidden2 = Dense(512, activation='relu')(hidden1)
+hidden3 = Dense(28*28, activation='relu')(hidden2)
+reshap = Reshape((28, 28))(hidden3)
+concat_ = Concatenate()([input_, reshap])
+flatten2 = Flatten(input_shape=[28, 28])(concat_)
+output = Dense(10, activation='softmax')(flatten2)
+model = Model(inputs=[input_], outputs=[output] )
+```
 
 
 
