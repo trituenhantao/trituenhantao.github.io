@@ -58,7 +58,7 @@ Dữ liệu cho bài này mình sẽ sử dụng tập MNIST, đây là tập d�
 import keras
 
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D, Input, Reshape
+from keras.layers import *
 from keras.utils import to_categorical
 import matplotlib.pyplot as plt
 from keras.datasets import mnist
@@ -97,14 +97,13 @@ Bắt đầu thôi nào !!!
 ```
 model = Sequential()
 model.add(Flatten(input_shape=[28, 28]))
-model.add(.Dense(256, activation="relu"))
+model.add(Dense(256, activation="relu"))
 model.add(Dense(128, activation="relu"))
 model.add(Dense(10, activation="softmax"))
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 model.summary()
-
 ````
 Mình sẽ giải thích cho bạn bạn đoạn code này mình viết gì
 
@@ -120,8 +119,34 @@ reshap = Reshape((28, 28))(hidden3)
 concat_ = Concatenate()([input_, reshap])
 flatten2 = Flatten(input_shape=[28, 28])(concat_)
 output = Dense(10, activation='softmax')(flatten2)
-model = Model(inputs=[input_], outputs=[output] )
+model = keras.Model(inputs=[input_], outputs=[output] )
+model.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+model.summary()
 ```
 
+Mình sẽ giải thích cho bạn bạn đoạn code này mình viết gì
 
+### 5. Thực hiện train model :
+
+```
+model.fit(X_train, y_train, epochs=10, verbose=2)
+
+```
+
+### 6. Đánh giá mô hình :
+
+```
+score = model.evaluate(X_test, y_test, verbose=0)
+print(score)
+```
+### 7. Dự đoán :
+
+```
+plt.imshow(X_test[1998].reshape(28,28))
+
+y_predict = np.argmax(model.predict(X_test[1998].reshape(1,28,28,1)))
+print('Giá trị dự đoán: ', y_predict)
+```
 
