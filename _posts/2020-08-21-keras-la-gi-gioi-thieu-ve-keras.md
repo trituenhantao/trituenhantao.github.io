@@ -111,10 +111,16 @@ model.summary()
 ![Keras là gì ? giới thiệu về keras ](/img/keras-la-gi-gioi-thieu-ve-keras-1.jpg "Keras là gì ? giới thiệu về keras")
 
 Mình sẽ giải thích cho bạn bạn đoạn code này mình viết gì
+
     + Đầu tiên mình sẽ khởi tạo model Sequential cho bài toán
+
     + Đầu vào của chúng ta là ma trận có số chiều là 28x28 chúng ta sẽ sử dụng Flatten để duỗi thẳng chúng ta thành một mảng
-    + Dense là cách khai báo 1 layer trong Keras, với output_dim là số chiều đầu ra của layer đó, và activation là hàm kích hoạt của layer mọi người nên tìm hiểu về tất cả các hàm kích hoạt để chọn được hàm kích hoạt phù hợp cho mỗi bài toán.
+
+    + Dense là cách khai báo 1 layer trong Keras, với output_dim là số chiều đầu ra của layer đó, và activation là hàm kích hoạt của 
+    layer mọi người nên tìm hiểu về tất cả các hàm kích hoạt để chọn được hàm kích hoạt phù hợp cho mỗi bài toán.
+    
     + Đầu ra của bài toán chúng ta sẽ sử dụng hàm activation để tính xác suất của ảnh đó là số gì.
+
     + Hàm compile là hàm chúng ta cần để xác định các optimizer trong quá trình train.
 
 #### 4.2. Xây dựng model keras bằng Function API :
