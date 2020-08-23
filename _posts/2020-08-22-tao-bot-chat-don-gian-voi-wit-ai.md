@@ -77,13 +77,13 @@ Lưu ý bản phải đảm bảo máy của bạn đã cài đặt python nhé 
 Sau khi cài đặt thành công bạn tạo 1 file main.py và coppy đoạn code này vào :
 
 ```
-#Python libraries that we need to import for our bot
-import random
 from flask import Flask, request, Response
 from pymessenger.bot import Bot
 from wit import Wit
 import requests
+
 app = Flask(__name__)
+
 ACCESS_TOKEN = 'ACCESS_TOKEN'
 VERIFY_TOKEN = 'VERIFY_TOKEN'
 WIT_TOKEN    = 'ACCESS_TOKEN'
