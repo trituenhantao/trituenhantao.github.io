@@ -3,7 +3,7 @@ layout:     post
 title: Tạo botchat đơn giản với Wit
 SEOTitle : Tạo một botchat facebook đơn giản với Wit.ai | blog TTNT
 description: Trong bài viết hôm nay mình sẽ giúp các bạn tạo một botchat đơn giản với wit.ai sử dụng ngôn ngữ python. Bạn có thể làm con botchat cho các mục đích riêng của bạn.
-keywords: "tạo botchat facebook, botchat facebook, tạo botchat bằng wit, tạo botchat bằng python, tạo botchat tiếng việt, botchat fanpage, botchat messenger, xây dựng botchat"
+keywords: "tạo botchat facebook, botchat facebook, tạo botchat bằng wit, tạo botchat bằng python, tạo botchat tiếng việt, botchat fanpage, botchat messenger, xây dựng botchat, tạo botchat python, botchat tiếng viêt, build botchat bằng python, b"
 sub_url: "http://trituenhantao.github.io/tao-bot-chat-don-gian-bang-wit-ai" 
 #subtitle:   từ lý thuyết đến áp dụng 
 date:       2020-08-22
