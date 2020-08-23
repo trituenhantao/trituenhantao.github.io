@@ -32,7 +32,9 @@ Mình sẽ nói qua về giao diện trang chủ wit.ai
 ![Tạo chatbot với wit.ai bằng python](/img/tao-chat-bot-facebook-voi-wit-ai-python.jpg "Tạo chatbot với wit.ai bằng python")
 
 Utterance : đây là phần câu thoại mà con bot của bạn sẽ nhận được để phân tích
+
 Intents : Ý định của câu thoại đó
+
 Traits : Đặc điểm của câu thoại
 
 ## 3. Cách phân tích câu thoại :
@@ -42,6 +44,7 @@ Mình sẽ phân tích mẫu 1 câu thoại và training câu thoại đó để
 ví dụ fanpage mình là fanpage bán giày và mình nhận được câu hỏi là : " Bạn có bán giày Nike SB size UK 10 không vậy ? " mình sẽ hướng dẫn các bạn phân tích câu thoại này. 
 
 ở đây các bạn thấy cụm từ "giày Nike SB" là sản phẩm của mình bán, cụm từ "size UK 10" là size của giày khách cần mua, còn lại 2 cụm từ "bạn có bán " và " không vậy ?" là 2 cụm từ thể hiện hành động cần mua của người mua. 
+
 Sau khi phân tích được các từ trong câu ta cần cho bot học để hiểu, khi bot gặp những trường hợp này bot sẽ biết đây là người hỏi mua giày Nike SB size UK 10, từ đó sẽ đưa ra được câu trả lời phù hợp. Mình bắt đầu dạy bot nhé :v
 
 ![Tạo chatbot với wit.ai bằng python](/img/tao-chat-bot-facebook-voi-wit-ai-python-1.jpg "Tạo chatbot với wit.ai bằng python")
@@ -52,7 +55,9 @@ Học càng nhiều dữ liệu thì bot của ta sẽ càng thông minh.
 ## 4. Thêm tính năng developer cho fanpage :
 
 Sau khi đã hoàn thiện 1 con bot vừa ý bây giờ là lúc bạn cần kết nối con bot với fanpage bán hàng của mình.
+
 Đầu tiên bạn vào trang web dành cho developers tại [https://developers.facebook.com](https://developers.facebook.com){:target="_blank"} và đăng ký cho mình 1 app bằng facebook (phần này cũng tương tự như wit)
+
 Sao khi hoàn thành đăng ký tại giao diện developer ở phần *Access tokens* bạn chọn *Add or remove pages* và thêm fanpage của mình cần kết nối chat bot vào. vậy là hoàn thành !
 
 ![Tạo chatbot với wit.ai bằng python](/img/tao-chat-bot-facebook-voi-wit-ai-python-2.jpg "Tạo chatbot với wit.ai bằng python")
@@ -172,8 +177,11 @@ def handle_message(response, fb_id):
 
 ```
 Lưu ý : Bạn chỉ thay đổi 3 giá trị ACCESS_TOKEN, VERIFY_TOKEN, WIT_TOKEN. 
+
 ACCESS_TOKEN chính là token bạn lấy trong [https://developers.facebook.com](https://developers.facebook.com){:target="_blank"} tại mục *Generate Token*
+
 VERIFY_TOKEN là mã bí mật bạn tự tạo để kết nối đến fanpage của bạn
+
 WIT_TOKEN là token bạn lấy trong [https://wit.ai](https://wit.ai){:target="_blank"} tại mục *Server Access Token* ở phần *setting*
 
 ## 6. Deploy file lên heroku:
@@ -223,8 +231,5 @@ git push heroku master
 
 Sau khi deploy thành công bạn vào lại trang [https://developers.facebook.com](https://developers.facebook.com){:target="_blank"} tại phần messenger bạn chọn setting và dán đường dẫn bạn vừa deploy được vào ô Callback URL , và Verify Token là token bạn đã tạo trong code ở file main.py.
 
-
 Vậy là xong, vậy là bạn đã tạo được 1 con chatbot cho fanpage của riêng mình. Để con chatbot thông minh thì bạn phải cho nó học thật nhiều nhé. Đây là thành quả của mình. Chúc các bạn thành công.
-
-
 
