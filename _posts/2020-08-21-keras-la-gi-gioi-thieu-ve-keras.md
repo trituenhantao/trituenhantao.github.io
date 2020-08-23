@@ -173,4 +173,4 @@ print('Giá trị dự đoán: ', y_predict)
 
 Chúng ta có thể kiểm tra độ chính xác của mô hình này thông qua việc hiển thị một số 1 tập dataset và dự đoán số đó bằng mô hình ta vừa train xong.
 
-Như vậy qua bài này mình đã hướng dẫn các bạn xây dựng 1 mô hình neural network căn bản bằng keras áp dụng thực tế để dự đoán chữ số viết tay. Mọi người có thể tham khảo code tại [đây](https://colab.research.google.com/drive/1S191tvQ-2ChUAXuAJkJWaajHf-l826_w?usp=sharing)
+Như vậy qua bài này mình đã hướng dẫn các bạn xây dựng 1 mô hình neural network căn bản bằng keras áp dụng thực tế để dự đoán chữ số viết tay. Mọi người có thể tham khảo code tại [đây](https://colab.research.google.com/drive/1S191tvQ-2ChUAXuAJkJWaajHf-l826_w?usp=sharing){:target="_blank"}
