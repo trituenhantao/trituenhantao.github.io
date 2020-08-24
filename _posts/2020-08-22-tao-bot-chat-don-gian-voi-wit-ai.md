@@ -3,7 +3,7 @@ layout:     post
 title: Tạo botchat đơn giản với Wit
 SEOTitle : Tạo một botchat facebook đơn giản với Wit.ai | blog TTNT
 description: Trong bài viết hôm nay mình sẽ giúp các bạn tạo một botchat đơn giản với wit.ai sử dụng ngôn ngữ python. Bạn có thể làm con botchat cho các mục đích riêng của bạn.
-keywords: "tạo botchat facebook, botchat facebook, tạo botchat bằng wit, tạo botchat bằng python, tạo botchat tiếng việt, botchat fanpage, botchat messenger, xây dựng botchat"
+keywords: "tạo botchat facebook, botchat facebook, tạo botchat bằng wit, tạo botchat bằng python, tạo botchat tiếng việt, botchat fanpage, botchat messenger, xây dựng botchat, tạo chatbot bằng python, tạo botchat fanpage, tạo botchat đơn giản, witai kết nối python"
 sub_url: "http://trituenhantao.github.io/tao-bot-chat-don-gian-bang-wit-ai" 
 #subtitle:   từ lý thuyết đến áp dụng 
 date:       2020-08-22
@@ -225,8 +225,8 @@ git push heroku master
 Sau khi deploy thành công bạn vào lại trang [https://developers.facebook.com](https://developers.facebook.com){:target="_blank"} tại phần messenger bạn chọn setting và dán đường dẫn bạn vừa deploy được vào ô Callback URL , và Verify Token là token bạn đã tạo trong code ở file main.py.
 
 
-Vậy là xong, vậy là bạn đã tạo được 1 con chatbot cho fanpage của riêng mình. Để con chatbot thông minh thì bạn phải cho nó học thật nhiều nhé. Tại phần hàm ```handle_message``` 
+Vậy là xong, vậy là bạn đã tạo được 1 con chatbot cho fanpage của riêng mình. Để con chatbot thông minh thì bạn phải cho nó học thật nhiều nhé. Tại phần hàm ```handle_message``` các bạn modify theo mục đích riêng của từng bạn nhé. Và đây là kết quả của mình. Chúc mọi người thành công . 
 
-
+![Tạo chatbot với wit.ai bằng python](/img/tao-chat-bot-facebook-voi-wit-ai-python-3.jpg "Tạo chatbot với wit.ai bằng python")
 
 
