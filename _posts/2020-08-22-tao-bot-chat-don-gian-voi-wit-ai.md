@@ -199,7 +199,8 @@ pip freeze > requirements.txt
 touch Procfile
 touch runtime.txt
 ```
-Sau khi hoàn thành bạn sẽ thấy trong folder xuất hiện thêm 3 file, file requirements là file chứa các thư viện cần thiết để bạn thiết lập trên server, file runtime là file chứa môi trường python hiện tại của bạn, còn file cuối cùng là file Procfile bạn chỉ cần dán đoạn mã sau đây là là xong nhé ```web: gunicorn app:wsgi```
+Sau khi hoàn thành bạn sẽ thấy trong folder xuất hiện thêm 3 file, file requirements là file chứa các thư viện cần thiết để bạn thiết lập trên server, file runtime là file chứa môi trường python hiện tại của bạn, còn file cuối cùng là file Procfile bạn chỉ cần dán đoạn mã sau đây là là xong nhé 
+```web: gunicorn app:wsgi```
 
 Như vậy là hoàn thành việc setup các file để deploy lên heroku. Chúng ta bắt đầu deploy thôi nào :v
 
@@ -224,7 +225,8 @@ git push heroku master
 Sau khi deploy thành công bạn vào lại trang [https://developers.facebook.com](https://developers.facebook.com){:target="_blank"} tại phần messenger bạn chọn setting và dán đường dẫn bạn vừa deploy được vào ô Callback URL , và Verify Token là token bạn đã tạo trong code ở file main.py.
 
 
-Vậy là xong, vậy là bạn đã tạo được 1 con chatbot cho fanpage của riêng mình. Để con chatbot thông minh thì bạn phải cho nó học thật nhiều nhé. Đây là thành quả của mình. Chúc các bạn thành công.
+Vậy là xong, vậy là bạn đã tạo được 1 con chatbot cho fanpage của riêng mình. Để con chatbot thông minh thì bạn phải cho nó học thật nhiều nhé. Tại phần hàm ```handle_message``` 
+
 
 
 
