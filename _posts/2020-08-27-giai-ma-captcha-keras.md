@@ -138,6 +138,7 @@ Cấu trúc bài toán được mô tả đây đủ trong hình dưới đây :
 
 ![Giải mã captcha chữ với keras](/img/giai-ma-captcha-voi-keras-1.jpg "Giải mã captcha chữ với keras")
 
+```
 class CTCLayer(layers.Layer):
     def __init__(self, name=None):
         super().__init__(name=name)
