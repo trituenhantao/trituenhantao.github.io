@@ -21,7 +21,7 @@ Trong bài hôm nay mình sẽ hướng dẫn các bạn xây dựng một mô h
 
 Mình sẽ sử dụng bộ dữ liệu captcha_images_v2 gồm 1040 ảnh định dạng png. Trong đó label cũng là các tên của ảnh, kích thước mỗi ảnh là 200x50 pixel. 
 
-![Giải mã captcha chữ với keras](/img/gia-ma-captcha-voi-keras.jpg "Giải mã captcha chữ với keras")
+![Giải mã captcha chữ với keras](/img/giai-ma-captcha-voi-keras.jpg "Giải mã captcha chữ với keras")
 
 Các bạn có thể tải đầy đủ dataset tại [đây](https://www.kaggle.com/fournierp/captcha-version-2-images){:rel=nofollow}
 
@@ -136,7 +136,7 @@ test_dataset = (test_dataset.map(encode_single_sample).batch(batch_size))
 Trong bài toán này mình sẽ xây dựng 1 mạng kết hợp CNN, RNN với đầu ra là một lớp CTC loss.
 Cấu trúc bài toán được mô tả đây đủ trong hình dưới đây :
 
-![Giải mã captcha chữ với keras](/img/gia-ma-captcha-voi-keras-1.jpg "Giải mã captcha chữ với keras")
+![Giải mã captcha chữ với keras](/img/giai-ma-captcha-voi-keras-1.jpg "Giải mã captcha chữ với keras")
 
 class CTCLayer(layers.Layer):
     def __init__(self, name=None):
@@ -214,9 +214,10 @@ def build_model():
     model.compile(optimizer=opt)
     return model
 
-
 model = build_model()
 model.summary()
+
+```
 
 ## Training :
 mình sẽ training 50 epochs các bạn có thể training nhiều hơn nếu muốn cải thiện độ chính xác
@@ -262,14 +263,14 @@ plt.show()
 ```
 Và đây là thành quả :
 
-![Giải mã captcha chữ với keras](/img/gia-ma-captcha-voi-keras-2.jpg "Giải mã captcha chữ với keras")
+![Giải mã captcha chữ với keras](/img/giai-ma-captcha-voi-keras-2.jpg "Giải mã captcha chữ với keras")
 
-Như vậy qua bài này mình đã hướng dẫn các bạn xây dựng 1 bài toán OCR đơn giản, mọi người có thể chạy code tại [đây]
+Như vậy qua bài này mình đã hướng dẫn các bạn xây dựng 1 bài toán OCR đơn giản, mọi người có thể chạy code tại [đây](https://colab.research.google.com/drive/1Mfm1apwTHskTzntiQEuUGwAhQEiF4QeT?usp=sharing)
 
 Tài liệu tham khảo :
 
-1: [https://www.kaggle.com/fournierp/captcha-version-2-images](https://www.kaggle.com/fournierp/captcha-version-2-images)
+1: [https://www.kaggle.com/fournierp/captcha-version-2-images](https://www.kaggle.com/fournierp/captcha-version-2-images){:rel=nofollow}
 
-2: [https://www.dlology.com/blog/how-to-train-a-keras-model-to-recognize-variable-length-text/](https://www.dlology.com/blog/how-to-train-a-keras-model-to-recognize-variable-length-text/)
+2: [https://www.dlology.com/blog/how-to-train-a-keras-model-to-recognize-variable-length-text/](https://www.dlology.com/blog/how-to-train-a-keras-model-to-recognize-variable-length-text/){:rel=nofollow}
 
-3: [https://keras.io/examples/vision/captcha_ocr/](https://keras.io/examples/vision/captcha_ocr/)
+3: [https://keras.io/examples/vision/captcha_ocr/](https://keras.io/examples/vision/captcha_ocr/){:rel=nofollow}
