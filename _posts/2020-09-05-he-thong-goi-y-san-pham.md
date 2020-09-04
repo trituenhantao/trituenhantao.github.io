@@ -6,7 +6,7 @@ description: Gợi ý sản phẩm ( Recommender systems) là hệ thống giúp
 keywords: "hệ thống gợi ý sản phẩm, triển khai hệ thống gợi ý sản phẩm, hệ thống gợi ý session-based, hệ thống gợi ý content-based, hệ thống gợi ý user-based, hệ thống gợi ý content-based, các hệ thống gợi ý sản phẩm"
 sub_url: "http://trituenhantao.github.io/he-thong-goi-y-san-pham" 
 #subtitle:   từ lý thuyết đến áp dụng 
-date:       2020-08-20
+date:       2020-09-05
 author:     admin
 #header-img: img/post-bg-cook.jpg
 catalog: true
@@ -34,5 +34,6 @@ Về cơ bản recommender systems được chia làm 3 công nghệ chính :
 
 Trong khuôn khổ bài viết này mình sẽ hướng dẫn cho các bản triển khai 4 hệ thống gợi ý bao gồm : user-based, item-based, content-based và session-based.
 
+## II. Lọc công tác (Collaborative filtering) :
 
-
+Ý tưởng của Lọc cộng tác: “người tương tự” có thể thích “sản phẩm tương tự” hoặc ngược lại, từ đó việc của chúng ta cần làm là tìm ra mối tương quan giữa các user và item
