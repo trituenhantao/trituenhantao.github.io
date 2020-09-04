@@ -35,11 +35,17 @@ Trong khuôn khổ bài viết này mình sẽ hướng dẫn cho các bản tri
 Ý tưởng của Lọc cộng tác: “người tương tự” có thể thích “sản phẩm tương tự” hoặc ngược lại, từ đó việc của chúng ta cần làm là tìm ra mối tương quan giữa các user và item để gợi ý các sản phẩm cho người dùng.
 ### 1. User-based :
 User-base là một dạng recommender systems dựa vào độ tương quan giữa các user để gợi ý sản phẩm cho các user.
+
 Đến đây các bạn sẽ có một câu hỏi : làm sao để tính độ tương quan của người dùng ?
+
 Chúng ta sẽ tính độ tương quan của các user dựa vào khoảng cách giữa các user trong ma trận biểu diễn user - item. Nếu khoảng cách giữa 2 user càng nhỏ tức 2 user có độ tương tự như nhau và ngược lại.
+
 Vậy chúng ta tính khoảng cách bằng gì? Tất nhiên là không phải bằng thước rồi :v. Chúng ta sẽ tính khoảng cách bằng các công thức Ơ-clit, Minkowski, Cosin,.. Trong bài này mình sẽ sử dụng công thức tính khoảng cách cosin.
 
 Tuy không phải là người Hải Phòng nhưng mình cũng không thích lòng vòng. Mình triển khai ngay một hệ thống gợi ý sử dụng user-based để mọi người cùng hiểu nhé.
+
 Ví dụ mình có một bảng dưới đây thể hiện sự rating sao của 10 người dùng cho 8 app trên điện thoại của họ( các ô trống là những ô người dùng không hoặc chưa đánh giá) từ đó chúng ta cần đưa ra dự đoán sự yêu thích của họ với các ô trống chưa được đánh giá để gợi ý cho người dùng.
 
-![Hệ thống gợi ý recommender systems](/img/he-thong-goi-y-recommender-systems-2.jpg "Hệ thống gợi ý recommender systems")
+![Hệ thống gợi ý recommender systems](/img/he-thong-goi-y-recommender-systems-1.jpg "Hệ thống gợi ý recommender systems")
+
+Đầu tiên mình sẽ sử dụng công thức cosin để tính độ tương quan của user :
