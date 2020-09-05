@@ -44,8 +44,71 @@ Vậy chúng ta tính khoảng cách bằng gì? Tất nhiên là không phải 
 
 Tuy không phải là người Hải Phòng nhưng mình cũng không thích lòng vòng. Mình triển khai ngay một hệ thống gợi ý sử dụng user-based để mọi người cùng hiểu nhé.
 
-Ví dụ mình có một bảng dưới đây thể hiện sự rating sao của 10 người dùng cho 8 app trên điện thoại của họ( các ô trống là những ô người dùng không hoặc chưa đánh giá) từ đó chúng ta cần đưa ra dự đoán sự yêu thích của họ với các ô trống chưa được đánh giá để gợi ý cho người dùng.
+Ví dụ mình có một bảng dưới đây thể hiện sự rating sao của 10 người dùng cho 8 app trên điện thoại của họ( các ô trống là những ô người dùng không hoặc chưa đánh giá) từ đó chúng ta cần đưa ra dự đoán sự yêu thích của họ với các ô trống chưa được đánh giá để gợi ý cho người dùng. mọi người có thể tải data mẫu tại [đây](https://github.com/trituenhantao/data-web/blob/master/data_collaborative.csv)
 
 ![Hệ thống gợi ý recommender systems](/img/he-thong-goi-y-recommender-systems-1.jpg "Hệ thống gợi ý recommender systems")
 
-Đầu tiên mình sẽ sử dụng công thức cosin để tính độ tương quan của user :
+Mình sẽ sử dụng công thức cosin để tính độ tương quan của user :
+
+![Hệ thống gợi ý recommender systems](/img/he-thong-goi-y-recommender-systems-4.jpg "Hệ thống gợi ý recommender systems")
+
+Đầu tiền mình sẽ import một số thư viện cần thiết cho bài toán :
+
+```
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+import pandas as pd
+```
+
+Load dữ liệu và visualization dữ liệu bằng dataframe :
+
+```
+data = pd.read_csv('./data_collaborative.csv', sep=';')
+print(data)
+```
+
+sử dụng hàm ```cosine_similarity``` trong thư viện sklearn để tính khoảng cách giữa các user
+
+```
+Sim = cosine_similarity(data_matrix,data_matrix)
+Sim = np.round(Sim, decimals = 2)
+Sim
+```
+Sau khi tính xong ta sẽ được ma trận khoảng cách giữa các user như hình:
+
+![Hệ thống gợi ý recommender systems](/img/he-thong-goi-y-recommender-systems-2.jpg "Hệ thống gợi ý recommender systems")
+
+Tiếp tục chúng ta sẽ dựa vào độ tương quan của các user để dự đoán các đánh giá các item mà user trước đó chưa đánh giá, mình sẽ áp dụng công thức dự đoán tại từng điểm dữ liệu :
+
+![Hệ thống gợi ý recommender systems](/img/he-thong-goi-y-recommender-systems-5.jpg "Hệ thống gợi ý recommender systems")
+
+```
+def predict(A, u,i, k=2):
+    user_rated_i = np.where(A[:,i] !=0)[0]
+    sim = Sim[u, user_rated_i]
+    a = (np.argsort(sim))[-k:]
+    nearest_s =sim[a] 
+    rating = A[user_rated_i[a],i]
+    r_bar = (rating*nearest_s).sum()/(np.abs(nearest_s).sum())
+    return np.round(r_bar)
+
+predict_matrix = data_matrix.copy()
+for u in range(0, predict_matrix.shape[0]):
+  for i in range(0, predict_matrix.shape[1]):
+    if data_matrix[u,i] ==0:
+      id = i
+      predict_matrix[u,i] = predict(data_matrix,u,id)
+
+```
+Kết quả chúng ta sẽ thu được ma trận dự đoán như sau :
+
+![Hệ thống gợi ý recommender systems](/img/he-thong-goi-y-recommender-systems-3.jpg "Hệ thống gợi ý recommender systems")
+
+Từ ma trận dự đoán này bạn có thể gợi ý cho người dùng các app mặc dù họ chưa dùng nhưng bạn nghĩ họ sẽ thích nó dựa vào các điểm dự đoán. Bạn có thể tham khảo code đầy đủ tại [đây](https://colab.research.google.com/drive/1Vj9rS2laS39z0IrMHn3Kkq8BvENo8gkv?usp=sharing)
+
+### 2. Item - based:
+
+Đây là một bài toán tương tự hoàn toàn user -based chỉ khác ở chỗ các bạn sẽ dựa vào độ tương tự giữa các item thay vì độ tương tự giữa các user, nên mình sẽ không thực hiện lại. Mọi người có thể tự kiểm tra và so sánh kết quả với user - based.
+
+### 3. Content - based :
+
