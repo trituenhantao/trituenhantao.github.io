@@ -134,7 +134,7 @@ import numpy as np
 import pandas as pd
 ```
 
-Bộ dữ liệu gồm 24 feature là : 'adult','belongs_to_collection','budget','genres','homepage','id','imdb_id''original_language','original_title','overview','popularity','poster_path','production_companies','production_countries','release_date','revenue','runtime','spoken_languages','status','tagline','title','video','vote_average','vote_count' . Ở đây mình sẽ làm một bài content-based đơn giản nên chỉ sử dụng feature overview trong tập dữ liệu.
+Bộ dữ liệu gồm 24 feature là : 'adult', 'belongs_to_collection', 'budget', 'genres', 'homepage', 'id', 'imdb_id', 'original_language', 'original_title', 'overview', 'popularity', 'poster_path', 'production_companies', 'production_countries', 'release_date', 'revenue', 'runtime', 'spoken_languages', 'status', 'tagline', 'title', 'video',  'vote_average', 'vote_count' . Ở đây mình sẽ làm một bài content-based đơn giản nên chỉ sử dụng feature overview trong tập dữ liệu.
 
 ```
 data = pd.read_csv('movies_dataset.csv')
@@ -184,3 +184,4 @@ Trên đây là bài viết đơn giản mình sử dụng content-based để g
 
 Sau khi tìm hiểu 2 mô hình gợi ý Lọc cộng tác và lọc theo nội dung ta thấy được để có được độ chính xác cao cho lọc cộng tác ta cần người dùng phải tương tác với hệ thống, và các sản phẩm phổ biến sẽ được nhiều đánh giá và sẽ không cân bằng cho hệ thống. Bên cạnh đó ta cũng thấy được một hạn chế của hai mô hình này là nó đều không đánh giá được mục đích của khác hàng thông qua mỗi lần khách hàng vào trang web của chúng ta. Từ những hạn chế này người ta xây dựng nên một mô hình hiện đại và cải tiến hơn đó là session- based. Chúng ta sẽ ghi lại toàn bộ các tracking của khách hàng khi vào trang web từ những lần click ảnh, click xem tiếp, dừng lại xem ảnh, like, xem review, tìm kiếm,... Sau khi phân tích ta sẽ tìm ra được mục đích của người dùng khi vào trang web là gì và sẽ gợi ý sản phẩm phù hợp cho người dùng.
 
+Trong bài này mình sẽ hướng dẫn các bạn sử dụng một mô hình mạng neural dựa và các session để xây dựng hệ thống gợi ý sản phẩm.
