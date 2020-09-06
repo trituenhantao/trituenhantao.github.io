@@ -181,3 +181,6 @@ Kết quả ta sẽ thu được 1 list 10 bộ phim tương tự như bộ phim
 Trên đây là bài viết đơn giản mình sử dụng content-based để gợi ý phim cho người coi. Vì mình chỉ dùng mỗi feature overview nên kết quả cũng có thể không thật sự chính xác nhất. bạn nên tận dụng tất cả các feature của item để xây dựng được một profile item hoàn hảo.
 
 ### 4. Session- based : 
+
+Sau khi tìm hiểu 2 mô hình gợi ý Lọc cộng tác và lọc theo nội dung ta thấy được để có được độ chính xác cao cho lọc cộng tác ta cần người dùng phải tương tác với hệ thống, và các sản phẩm phổ biến sẽ được nhiều đánh giá và sẽ không cân bằng cho hệ thống. Bên cạnh đó ta cũng thấy được một hạn chế của hai mô hình này là nó đều không đánh giá được mục đích của khác hàng thông qua mỗi lần khách hàng vào trang web của chúng ta. Từ những hạn chế này người ta xây dựng nên một mô hình hiện đại và cải tiến hơn đó là session- based. Chúng ta sẽ ghi lại toàn bộ các tracking của khách hàng khi vào trang web từ những lần click ảnh, click xem tiếp, dừng lại xem ảnh, like, xem review, tìm kiếm,... Sau khi phân tích ta sẽ tìm ra được mục đích của người dùng khi vào trang web là gì và sẽ gợi ý sản phẩm phù hợp cho người dùng.
+
